@@ -439,6 +439,7 @@ void WorldSession::HandleGuildBankerActivate(WorldPacket& recvPacket)
         , GetPlayerInfo().c_str(), guid, sendAllSlots);
 
     GameObject const* const go = GetPlayer()->GetGameObjectIfCanInteractWith(guid, GAMEOBJECT_TYPE_GUILD_BANK);
+
     if (!go)
         return;
 

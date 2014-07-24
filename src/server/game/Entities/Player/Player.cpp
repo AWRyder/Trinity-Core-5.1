@@ -12178,8 +12178,10 @@ InventoryResult Player::CanUseItem(ItemTemplate const* proto) const
         if ((proto->Flags2 & ITEM_FLAGS_EXTRA_ALLIANCE_ONLY) && GetTeam() != ALLIANCE)
             return EQUIP_ERR_CANT_EQUIP_EVER;
 
-        if ((proto->AllowableClass & getClassMask()) == 0 || (proto->AllowableRace & getRaceMask()) == 0)
+        if ((proto->AllowableClass & getClassMask()) == 0 || (proto->AllowableRace & getRaceMask()) == 0){
+			//printf("%d & %d\n",proto->AllowableClass , getClassMask());
             return EQUIP_ERR_CANT_EQUIP_EVER;
+		}
 
         if (proto->RequiredSkill != 0)
         {

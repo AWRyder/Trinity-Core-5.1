@@ -10,6 +10,7 @@
 
 set(sources
   ${sources}
+  Custom/teleporter.cpp
 )
 
 message("  -> Prepared: Custom")

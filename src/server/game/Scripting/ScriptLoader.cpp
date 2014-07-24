@@ -16,6 +16,10 @@
  */
 
 #include "ScriptLoader.h"
+//Mine
+void AddSC_TeLe_gossip_codebox();
+
+
 // Mogushan Vaults
 void AddSC_boss_the_stone_guard();
 
@@ -26,6 +30,7 @@ void AddSC_instance_mogushan_palace();
 // Pandaria zones
 void AddSC_vale_of_eternal_blossoms();
 void AddSC_boss_sha_of_anger();
+void AddSC_boss_galion();
 
 // Shado-Pan Monastery
 void AddSC_boss_gu_cloudstrike();
@@ -679,6 +684,8 @@ void AddScripts()
     AddOutdoorPvPScripts();
     AddCustomScripts();
 	AddPandariaScripts();
+	
+	
 #endif
 }
 
@@ -1319,6 +1326,7 @@ void AddPandariaScripts()
 
 	AddSC_vale_of_eternal_blossoms();
     AddSC_boss_sha_of_anger();
+	AddSC_boss_galion();
 
 	//Shado-Pan Monastery
     AddSC_boss_gu_cloudstrike();
@@ -1374,6 +1382,8 @@ void AddCustomScripts()
 {
 #ifdef SCRIPTS
     /* This is where custom scripts should be added. */
-
+    //Mine
+	AddSC_TeLe_gossip_codebox();
+	
 #endif
 }

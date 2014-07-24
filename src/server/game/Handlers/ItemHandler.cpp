@@ -1600,7 +1600,8 @@ void WorldSession::HandleTransmogrifyItems(WorldPacket& recvData)
     for (uint8 i = 0; i < count; ++i)
     {
         // slot of the transmogrified item
-        if (slots[i] >= EQUIPMENT_SLOT_END)
+		//edited
+        if (slots[i] >= EQUIPMENT_SLOT_END && 1 == 2)
         {
             sLog->outDebug(LOG_FILTER_NETWORKIO, "WORLD: HandleTransmogrifyItems - Player (GUID: %u, name: %s) tried to transmogrify an item (lowguid: %u) with a wrong slot (%u) when transmogrifying items.", player->GetGUIDLow(), player->GetName().c_str(), GUID_LOPART(itemGuids[i]), slots[i]);
             return;

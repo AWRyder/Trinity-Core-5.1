@@ -1405,11 +1405,6 @@ void Guild::HandleRoster(WorldSession* session /*= NULL*/)
 		data.WriteBit(guid[3]);
 		
 
-
-
-
-
-
         memberData.WriteByteSeq(guid[1]);
 
         memberData << uint8(member->GetLevel());
@@ -3450,6 +3445,9 @@ void Guild::_BroadcastEvent(GuildEvents guildEvent, uint64 guid, const char* par
 
 void Guild::SendBankListAll(WorldSession* session, bool withContent, bool withTabInfo) const
 {
+	printf("Sending bank list info with %d\n",_GetPurchasedTabsSize());
+	if ( _GetPurchasedTabsSize() == 0 ) 
+		SendBankList(session, 0, withContent, withTabInfo);
 	for(int i=0; i<_GetPurchasedTabsSize(); ++i)
 		SendBankList(session, i, withContent, withTabInfo);
 }

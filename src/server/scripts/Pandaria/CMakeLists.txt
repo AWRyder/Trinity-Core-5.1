@@ -12,6 +12,7 @@ set(sources
   ${sources}
   Pandaria/boss_sha_of_anger.cpp
   Pandaria/zone_wandering_isle.cpp
+  Pandaria/boss_galion.cpp
   Pandaria/zone_vale_of_eternal_blossoms.cpp
   Pandaria/MoguShanPalace/boss_gekkan.cpp
   Pandaria/MoguShanPalace/boss_xin_the_weaponmaster.cpp
